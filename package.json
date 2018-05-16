@@ -1,0 +1,20 @@
+{
+  "name": "xproxy",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "dn test && dn build -e prod"
+  },
+  "author": {
+    "name": "yeshu",
+    "email": "yeshu.lrt@alibaba-inc.com"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "mota": "^0.6.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "styled-components": "^3.2.6"
+  }
+}
