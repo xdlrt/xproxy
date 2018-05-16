@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Home from './scripts/pages/home'
+import 'antd/dist/antd.css';
+import Home from './scripts/pages/home';
 
 render(
   <Home />,

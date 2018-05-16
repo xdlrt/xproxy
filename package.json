@@ -10,7 +10,9 @@
     "email": "yeshu.lrt@alibaba-inc.com"
   },
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "antd": "^3.5.2"
+  },
   "dependencies": {
     "mota": "^0.6.0",
     "react": "^16.3.2",
