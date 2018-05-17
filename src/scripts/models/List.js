@@ -1,5 +1,6 @@
 import uuid from 'uuid';
 import { ListItemModel } from './listItem';
+import { saveListData } from '../utils/storage';
 
 class ListModel {
   id = '';
@@ -16,8 +17,12 @@ class ListModel {
   removeItem = (id) => {
     this.items = this.items.filter(item => item.id !== id);
   }
+
+  saveItems = () => {
+    saveListData(this.items);
+  }
 }
 
-const list = new ListModel();
+const listModel = new ListModel();
 
-export default list;
+export default listModel;

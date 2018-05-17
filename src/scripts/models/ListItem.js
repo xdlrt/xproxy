@@ -1,13 +1,13 @@
 import uuid from 'uuid';
 
 export class ListItemModel {
-  id = '';
-  url = '';
-  redirectUrl = '';
+  id;
+  url;
+  redirectUrl;
   _list = [];
 
-  title = '';
-  description = '';
+  title;
+  description;
   _titleEditing = false;
 
   constructor(list, item) {
@@ -15,6 +15,8 @@ export class ListItemModel {
     this._list = list || [];
     this.title = item.title || this.id;
     this.description = item.description;
+    this.url = item.url || '';
+    this.redirectUrl = item.redirectUrl || '';
   }
 
   get list() {
