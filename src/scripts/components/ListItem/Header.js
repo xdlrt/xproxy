@@ -5,6 +5,7 @@ import { Icon, Input } from 'antd';
 
 const Container = styled.div`
   position: relative;
+  height: 24px;
 `;
 
 const CustomIcon = styled(Icon)`
@@ -23,8 +24,8 @@ const TitleInput = styled(Input)`
 @binding
 export default class PanelItem extends React.Component {
 
-  onEditTitleKeyDown = (event) => {
-    if (event.keyCode !== 13) return;
+  exitEditTitle = (event) => {
+    if (event.keyCode !== 13 || !this.model.title) return;
     this.model.exitEditTitle();
   }
 
@@ -38,8 +39,8 @@ export default class PanelItem extends React.Component {
           ? <TitleInput
             data-bind="title"
             autoFocus={titleEditing}
-            onBlur={this.model.exitEditTitle}
-            onKeyDown={this.onEditTitleKeyDown} />
+            onBlur={this.exitEditTitle}
+            onKeyDown={this.exitEditTitle} />
           : null}
       </Container>
     );
