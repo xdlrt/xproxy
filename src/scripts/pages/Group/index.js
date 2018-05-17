@@ -51,7 +51,11 @@ export default class Group extends React.Component {
         <Header>
           <HeaderButton onClick={this.model.addItem}>添加规则</HeaderButton>
           <Button onClick={this.model.saveItems}>保存</Button>
-          <HeaderSwitch checkedChildren="on" unCheckedChildren="off" />
+          <HeaderSwitch
+            checkedChildren="on"
+            unCheckedChildren="off"
+            onChange={this.model.changeListState}
+            checked={this.model.listDisabled} />
         </Header>
         <List
           itemLayout="vertical"
