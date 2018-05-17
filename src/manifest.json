@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "dn-template-react-chrome-extension",
+  "name": "xproy",
   "version": "0.0.1",
-  "description": "基于react的chrome插件dawn模板",
+  "description": "A Chrome Extension for forwarding request urls.",
   "icons": {
     "16": "images/icon.png",
     "48": "images/icon.png",
@@ -13,7 +13,7 @@
   },
   "browser_action": {
     "default_icon": "images/icon.png",
-    "default_title": "基于react的chrome插件dawn模板",
+    "default_title": "chrome请求转发插件",
     "default_popup": "popup.html"
   },
   "permissions": [
@@ -23,5 +23,6 @@
     "browsingData",
     "<all_urls>"
   ],
-  "homepage_url": "https://github.com"
+  "homepage_url": "https://github.com",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
