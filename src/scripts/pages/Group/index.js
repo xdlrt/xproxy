@@ -45,6 +45,7 @@ export default class Group extends React.Component {
         </Header>
         <List
           itemLayout="vertical"
+          locale={{ emptyText: '现在还没有代理规则哦'}}
           dataSource={this.model.items}
           renderItem={item => (
             <CustomItem key={item.id}>
