@@ -13,6 +13,7 @@ const CustomItem = styled(Item) `
   border: 0;
   border-radius: 6px;
   background: #f7f7f7;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
   overflow: hidden
 `;
 
