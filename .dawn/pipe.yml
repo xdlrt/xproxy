@@ -36,3 +36,4 @@ build:
 
 test:
   - name: lint
+    global: chrome:true   
