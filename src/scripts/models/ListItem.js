@@ -4,9 +4,11 @@ export class ListItemModel {
   id = '';
   url = '';
   redirectUrl = '';
+  _list = [];
+
   title = '';
   description = '';
-  _list = [];
+  _titleEditing = false;
 
   constructor(list, item) {
     this.id = uuid();
@@ -19,7 +21,19 @@ export class ListItemModel {
     return this._list;
   }
 
+  get titleEditing() {
+    return this._titleEditing;
+  }
+
   removeItem = () => {
     this.list.removeItem(this.id);
+  }
+
+  editTitle = () => {
+    this._titleEditing = true;
+  }
+
+  exitEditTitle = () => {
+    this._titleEditing = false;
   }
 }

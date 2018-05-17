@@ -9,7 +9,7 @@ class ListModel {
     this.id = uuid();
   }
 
-  addItem = (item) => {
+  addItem = (item = {}) => {
     this.items.push(new ListItemModel(this, item));
   }
 
