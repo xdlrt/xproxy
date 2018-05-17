@@ -19,6 +19,7 @@ const CustomItem = styled(Item) `
 `;
 
 const Container = styled.div`
+  position: relative;
   margin: 0 auto;
   padding: 16px;
   width: 500px;
@@ -36,6 +37,18 @@ const HeaderButton = styled(Button) `
 const HeaderSwitch = styled(Switch) `
   float: right;
   margin-top: 5px;
+`;
+
+const CustomList = styled(List) `
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 400px;
+  padding: 0 16px 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 @model(ListModel)
@@ -57,7 +70,7 @@ export default class Group extends React.Component {
             onChange={this.model.changeListState}
             checked={this.model.listDisabled} />
         </Header>
-        <List
+        <CustomList
           itemLayout="vertical"
           locale={{ emptyText: '现在还没有代理规则哦' }}
           dataSource={this.model.items}
