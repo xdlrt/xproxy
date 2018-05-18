@@ -26,3 +26,11 @@ export function saveListData(items = []) {
     Toast.success('保存数据成功');
   });
 }
+
+export function saveXproxyDisabled(bool) {
+  chrome.storage.sync.set({
+    xproxyDisabled: bool
+  }, () => {
+    Toast.success('插件状态切换成功');
+  });
+}

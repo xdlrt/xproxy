@@ -9,7 +9,7 @@
     "128": "images/icon.png"
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js", "forward.js"]
   },
   "browser_action": {
     "default_icon": "images/icon.png",

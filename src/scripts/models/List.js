@@ -1,7 +1,7 @@
 /* global chrome */
 import uuid from 'uuid';
 import { ListItemModel } from './listItem';
-import { saveListData } from '../utils/storage';
+import { saveListData, saveXproxyDisabled } from '../utils/storage';
 
 class ListModel {
   id = '';
@@ -14,14 +14,14 @@ class ListModel {
   }
 
   get listDisabled() {
-    const bg = chrome.extension.getBackgroundPage();
-    this._listDisabled = bg.xproxyDisabled;
+    chrome.storage.sync.get('xproxyDisabled', (result) => {
+      this._listDisabled = result.xproxyDisabled;
+    });
     return this._listDisabled;
   }
 
   changeListState = (val) => {
-    const bg = chrome.extension.getBackgroundPage();
-    bg.xproxyDisabled = val;
+    saveXproxyDisabled(val);
     this._listDisabled = val;
   }
 
