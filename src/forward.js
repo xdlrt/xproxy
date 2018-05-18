@@ -23,10 +23,10 @@ const redirectToMatchingRule = (details) => {
     rules.forEach(rule => {
       let reg = rule.url;
       let isMatched = false;
-      // support [ ] ( ) \ * ^ $
+      // check if [ ] ( ) \ * ^ $ exist
       if (ORIGIN_URL_REG.test(rule.url)) {
-        // support ??
         // transform originUrl into regExp
+        // check if ?? exist, if true, transform ?? to regExp format
         reg = new RegExp(originUrl.replace('??', '\\?\\?'), 'i');
         isMatched = reg.test(originUrl);
       } else {
