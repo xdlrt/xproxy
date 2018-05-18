@@ -1,9 +1,11 @@
 /* global chrome */
-window.xproxyDisabled = 'disabled'; // 是否启用插件
-window.isCacheCleaning = false; // 是否正在清理缓存
+window.xproxyDisabled = 'disabled'; // if 'disabled',this extension will be disabled
+window.isCacheCleaning = false; // check if cleaning cache
+window.xproxyConfig = {}; // config
 
 chrome.storage.onChanged.addListener(changes => {
   if (changes.xproxyConfig) {
+    console.log(changes);
     window.xproxyConfig = changes.xproxyConfig.newValue;
   }
   if (changes.xproxyDisabled) {
@@ -11,11 +13,15 @@ chrome.storage.onChanged.addListener(changes => {
   }
 });
 
+chrome.storage.sync.get('xproxyConfig', result => {
+  window.xproxyConfig = result.xproxyConfig;
+});
+
 chrome.storage.sync.get('xproxyDisabled', result => {
   window.xproxyDisabled = result.xproxyDisabled;
 });
 
-// 清除浏览器缓存
+// clear browser cache
 function clearCache() {
   if (!window.isCacheCleaning) {
     window.isCacheCleaning = true;
