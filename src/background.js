@@ -5,7 +5,6 @@ window.xproxyConfig = {}; // config
 
 chrome.storage.onChanged.addListener(changes => {
   if (changes.xproxyConfig) {
-    console.log(changes);
     window.xproxyConfig = changes.xproxyConfig.newValue;
   }
   if (changes.xproxyDisabled) {

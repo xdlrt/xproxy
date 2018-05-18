@@ -1,4 +1,4 @@
-import { CHECK_IS_LEGAL } from './scripts/constants/regExp';
+import { CHECK_IS_LEGAL, ORIGIN_URL_REG } from './scripts/constants/regExp';
 
 let lastRequestId = null;
 const urls = new Array(200); // for cache
@@ -21,20 +21,21 @@ const redirectToMatchingRule = (details) => {
 
   try {
     rules.forEach(rule => {
-
+      let reg = rule.url;
       let isMatched = false;
-
       // support [ ] ( ) \ * ^ $
-      if (/\\|\[|]|\(|\)|\*|\$|\^/i.test(rule.url)) {
+      if (ORIGIN_URL_REG.test(rule.url)) {
         // support ??
-        const reg = new RegExp(originUrl.replace('??', '\\?\\?'), 'i');
+        // transform originUrl into regExp
+        reg = new RegExp(originUrl.replace('??', '\\?\\?'), 'i');
         isMatched = reg.test(originUrl);
       } else {
-        isMatched = originUrl.indexOf(rule.url) > -1;
+        // originUrl rules directly include rule.url
+        isMatched = originUrl.indexOf(reg) > -1;
       }
 
       if (isMatched && details.requestId !== lastRequestId) {
-        redirectUrl = originUrl.replace(rule.url, rule.redirectUrl);
+        redirectUrl = originUrl.replace(reg, rule.redirectUrl);
       }
 
       if (!redirectUrl) {
