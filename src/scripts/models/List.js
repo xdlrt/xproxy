@@ -7,22 +7,23 @@ class ListModel {
   id = '';
   items = [];
 
-  _listDisabled = false;
+  // 开关状态，on = true
+  _listState = false;
 
   constructor() {
     this.id = uuid();
   }
 
-  get listDisabled() {
+  get listState() {
     chrome.storage.sync.get('xproxyDisabled', (result) => {
-      this._listDisabled = result.xproxyDisabled;
+      this._listState = result.xproxyDisabled === 'disabled' ? false : true;
     });
-    return this._listDisabled;
+    return this._listState;
   }
 
   changeListState = (val) => {
     saveXproxyDisabled(val);
-    this._listDisabled = val;
+    this._listState = val;
   }
 
   addItem = (item = {}) => {

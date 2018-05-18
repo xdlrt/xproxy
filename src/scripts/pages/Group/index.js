@@ -68,7 +68,7 @@ export default class Group extends React.Component {
             checkedChildren="on"
             unCheckedChildren="off"
             onChange={this.model.changeListState}
-            checked={this.model.listDisabled} />
+            checked={this.model.listState} />
         </Header>
         <CustomList
           itemLayout="vertical"

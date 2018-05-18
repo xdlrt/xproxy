@@ -1,5 +1,5 @@
 /* global chrome */
-window.xproxyDisabled = false; // 是否启用插件
+window.xproxyDisabled = 'disabled'; // 是否启用插件
 window.isCacheCleaning = false; // 是否正在清理缓存
 
 chrome.storage.onChanged.addListener(changes => {
@@ -31,7 +31,7 @@ function clearCache() {
 
 chrome.webRequest.onBeforeRequest.addListener(
   (details) => {
-    if (!window.proxyDisabled) {
+    if (window.xproxyDisabled !== 'disabled') {
       clearCache();
       return window.onBeforeRequestCallback(details);
     }

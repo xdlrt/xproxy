@@ -29,7 +29,7 @@ export function saveListData(items = []) {
 
 export function saveXproxyDisabled(bool) {
   chrome.storage.sync.set({
-    xproxyDisabled: bool
+    xproxyDisabled: bool ? '' : 'disabled'
   }, () => {
     Toast.success('插件状态切换成功');
   });
