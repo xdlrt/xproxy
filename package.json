@@ -11,13 +11,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "antd": "^3.5.2"
-  },
-  "dependencies": {
+    "antd": "^3.5.2",
     "mota": "^0.6.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "styled-components": "^3.2.6",
     "uuid": "^3.2.1"
-  }
+  },
+  "dependencies": {}
 }
