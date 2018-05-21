@@ -53,3 +53,5 @@ const redirectToMatchingRule = (details) => {
 };
 
 window.onBeforeRequestCallback = (details) => redirectToMatchingRule(details);
+
+export default { redirectToMatchingRule };
