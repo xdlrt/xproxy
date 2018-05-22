@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/overview.png" width="400" />
+</p>
+
 # xproxy
 
 [![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
