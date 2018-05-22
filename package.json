@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "dn test"
+    "test": "dn test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": {
     "name": "yeshu",
@@ -11,12 +12,15 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^3.0.1",
+    "nyc": "^11.8.0"
+  },
+  "dependencies": {
     "antd": "^3.5.2",
     "mota": "^0.6.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "styled-components": "^3.2.6",
     "uuid": "^3.2.1"
-  },
-  "dependencies": {}
+  }
 }

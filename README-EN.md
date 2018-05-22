@@ -1,7 +1,7 @@
 # xproxy
 
 [![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
-![coverage](https://img.shields.io/badge/coverage-100%25-green.svg)
+[![Coverage Status](https://coveralls.io/repos/github/xdlrt/xproxy/badge.svg?branch=master)](https://coveralls.io/github/xdlrt/xproxy?branch=master)
 ![npm](https://img.shields.io/badge/npm-v5.4.2-blue.svg)
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 [![inspired by](https://img.shields.io/badge/inspired%20by-xswitch-lightgrey.svg)](https://github.com/yize/xswitch)
