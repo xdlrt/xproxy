@@ -209,7 +209,7 @@ describe('reg urls which should forward', () => {
     window.urls = new Array(200);
   });
 
-  it('should forward reg url without query', () => {
+  it('should forward reg url without query string', () => {
     window.xproxyConfig = {
       id: 'ioahsfioh',
       proxyList: [
@@ -246,7 +246,7 @@ describe('reg urls which should forward', () => {
     ).to.be.equal('https://g.alicdn.com?t=2/??a.js,b.js,c.js');
   });
 
-  it('should forward reg url with query', () => {
+  it('should forward reg url with query string', () => {
     window.xproxyConfig = {
       id: 'ioahsfioh',
       proxyList: [

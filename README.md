@@ -24,7 +24,9 @@
 
 ## 使用
 
-<img src="./assets/usage.png" style="width: 400px;height: 400px;margin: 0 auto;display: block;" />
+<p align="center">
+  <img src="./assets/usage.png" width="400" />
+</p>
 
 访问 `www.baidu.com` 同时 Chrome 浏览器会将它重定向为 `www.taobao.com`.
 
