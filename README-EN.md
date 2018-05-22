@@ -1,6 +1,11 @@
 # xproxy
 
 [![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
+![coverage](https://img.shields.io/badge/coverage-100%25-green.svg)
+![npm](https://img.shields.io/badge/npm-v5.4.2-blue.svg)
+![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![inspired by](https://img.shields.io/badge/inspired%20by-xswitch-lightgrey.svg)](https://github.com/yize/xswitch)
+
 
 A Chrome extension for forward requests by rules which was inspired by [xswitch](https://github.com/yize/xswitch) and reconstruct with React.
 
