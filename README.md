@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
 ![coverage](https://img.shields.io/badge/coverage-100%25-green.svg)
 ![npm](https://img.shields.io/badge/npm-v5.4.2-blue.svg)
-![license](https://img.shields.io/github/license/mashape/apistatus.svg)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 [![inspired by](https://img.shields.io/badge/inspired%20by-xswitch-lightgrey.svg)](https://github.com/yize/xswitch)
 
 [English README](./README-EN.md)
