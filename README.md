@@ -1,39 +1,26 @@
-# dn-template-react-chrome-extension
+# xproxy
 
-一个用于 dawn 工程化工具的极简模板，使用 React 构建用户 chrome 浏览器插件。
+[English README](./README-EN.md)
 
-## 技术栈说明
-默认使用 mota 管理数据流，使用 styled-components 管理样式。
-其中模板只提供了最简的项目文件及目录，数据流和样式管理方案可根据喜好自行修改。
+一个通过制定的规则来重定向请求的 Chrome 浏览器插件，灵感来源于[xswitch](https://github.com/yize/xswitch)，并且利用 React 重构整个项目。
 
-## 起步
+## 特点
 
-使用这个模板需要先安装好 [Dawn](https://github.com/alibaba/dawn)
+- 规则组开关控制
+- 通过规则来控制请求的url重定向
+- 当此插件生效时禁用浏览器缓存
+- UI 界面更加简洁易用
+- 完备的单元测试来保障重定向规则的准确性
 
-### 初始化
-```
-mkdir demo && cd demo
-dn init -t react-chrome-extension
-```
+## 安装 
 
-通过如上命令便可以完成项目的初始化
+你可以下载最新的发行版并在 Chrome 浏览器中以未打包的形式安装。
 
-### 开发
-```
-dn dev
-```
+## 使用
 
-### 构建
-```
-dn build
-```
+![usage](./assets/usage.png)
 
-## 调试
+访问 `www.baidu.com` 同时 Chrome 浏览器会将它重定向为 `www.taobao.com`.
 
-打开 `chrome://extensions/` 加载未打包的插件，选择 build 目录即可。
-
-### 调试 popup.html
-
-把下面网址中的id部分替换为你的扩展程序id即可，直接在浏览器中打开 `chrome-extension://{id}/popup.html`。
-
-tips: background 页需要手动刷新应用更改
+## License
+[MIT](https://opensource.org/licenses/MIT) © [yeshu.lrt](https://xdlrt.github.io/)
