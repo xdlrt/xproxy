@@ -1,5 +1,8 @@
 # xproxy
 
+[![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
+
+
 [English README](./README-EN.md)
 
 一个通过制定的规则来重定向请求的 Chrome 浏览器插件，灵感来源于[xswitch](https://github.com/yize/xswitch)，并且利用 React 重构整个项目。

@@ -1,5 +1,7 @@
 # xproxy
 
+[![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
+
 A Chrome extension for forward requests by rules which was inspired by [xswitch](https://github.com/yize/xswitch) and reconstruct with React.
 
 ## Features
