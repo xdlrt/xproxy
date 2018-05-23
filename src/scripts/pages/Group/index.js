@@ -10,11 +10,11 @@ const Item = List.Item;
 
 const CustomItem = styled(Item) `
   margin-bottom: 16px;
-  padding: 16px;
+  padding: 16px 16px 0;
   border: 0;
-  border-radius: 6px;
+  border-radius: 5px;
   background: #f7f7f7;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
   overflow: hidden
 `;
 
@@ -41,12 +41,12 @@ const HeaderSwitch = styled(Switch) `
 
 const CustomList = styled(List) `
   position: absolute;
-  top: 64px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   height: 400px;
-  padding: 0 16px 20px;
+  padding: 2px 16px 20px;
   overflow-x: hidden;
   overflow-y: auto;
 `;

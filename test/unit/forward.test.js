@@ -88,6 +88,36 @@ describe('should not forward', () => {
     })).to.deep.equal({});
   });
 
+  it('when checked is false should not forward', () => {
+    window.xproxyConfig = {
+      id: 'ioahsfioh',
+      proxyList: [
+        {
+          title: 'test0',
+          checked: true,
+          url: 'www.baidu.com',
+          redirectUrl: 'taobao.com'
+        },
+        {
+          title: 'test0',
+          checked: false,
+          url: 'www.douban.com',
+          redirectUrl: 'tmall.com'
+        }
+      ]
+    };
+    expect(
+      redirectToMatchingRule({
+        url: 'https://www.baidu.com',
+        requestId: 1
+      }).redirectUrl
+    ).to.be.equal('https://taobao.com');
+    expect(redirectToMatchingRule({
+      url: 'https://www.douban.com',
+      requestId: 2
+    })).to.deep.equal({});
+  });
+
 });
 
 describe('normal urls which should forward', () => {

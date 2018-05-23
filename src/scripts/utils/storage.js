@@ -19,8 +19,8 @@ export function getListData(listModel) {
 
 export function saveListData(items = []) {
   const proxyList = items.map(item => {
-    const { title, url, redirectUrl } = item;
-    return { title, url, redirectUrl };
+    const { title, url, redirectUrl, checked } = item;
+    return { title, url, redirectUrl, checked };
   });
   chrome.storage.sync.set({
     xproxyConfig: { proxyList }

@@ -12,7 +12,7 @@ const redirectToMatchingRule = (details) => {
   if (!rules || !rules.length || /^chrome-extension:\/\//i.test(originUrl)) {
     return {};
   }
-
+  
   // check if url is legal
   if (CHECK_IS_LEGAL.test(originUrl) && window.urls.indexOf(originUrl) < 0) {
     window.urls.shift();
@@ -20,11 +20,11 @@ const redirectToMatchingRule = (details) => {
   }
 
   rules.forEach(rule => {
-
-    if (!rule.url || !rule.redirectUrl) {
+    
+    if (!rule.url || !rule.redirectUrl || rule.checked === false) {
       return;
     }
-
+    
     let reg = rule.url;
     let isMatched = false;
 
@@ -40,6 +40,7 @@ const redirectToMatchingRule = (details) => {
     }
 
     if (isMatched && details.requestId !== window.lastRequestId) {
+      // console.log(redirectUrl, reg, rule.redirectUrl);
       redirectUrl = redirectUrl
         ? redirectUrl.replace(reg, rule.redirectUrl)
         : originUrl.replace(reg, rule.redirectUrl);

@@ -13,7 +13,7 @@ const CustomInput = styled(Input) `
 @binding
 export default class PanelItem extends React.Component {
 
-  @watch(model => model.url + model.redirectUrl + model.title)
+  @watch(model => model.url + model.redirectUrl)
   watchItem() {
     this.model.list.saveItems(this.model.list.items);
   }
@@ -21,8 +21,8 @@ export default class PanelItem extends React.Component {
   render() {
     return (
       <Container>
-        <CustomInput data-bind="url" placeholder="待转发url" />
-        <CustomInput data-bind="redirectUrl" placeholder="转发到的url" />
+        <CustomInput data-bind="url" placeholder="input origin url rule" />
+        <CustomInput data-bind="redirectUrl" placeholder="input redirect url rule" />
       </Container>
     );
   }

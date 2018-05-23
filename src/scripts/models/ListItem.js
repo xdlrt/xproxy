@@ -4,10 +4,11 @@ export class ListItemModel {
   id;
   url;
   redirectUrl;
-  _list = [];
-
+  checked = false;
   title;
   description;
+  
+  _list = [];
   _titleEditing = false;
 
   constructor(list, item) {
@@ -17,6 +18,7 @@ export class ListItemModel {
     this.description = item.description;
     this.url = item.url || '';
     this.redirectUrl = item.redirectUrl || '';
+    this.checked = item.checked || false;
   }
 
   get list() {

@@ -1,7 +1,8 @@
 import React from 'react';
-import { model, binding } from 'mota';
+import { model, binding, watch, bindable } from 'mota';
 import styled from 'styled-components';
-import { Icon, Input } from 'antd';
+import { Icon, Input, Checkbox } from 'antd';
+const BindCheckbox = bindable('checkbox', Checkbox);
 
 const Container = styled.div`
   position: relative;
@@ -10,8 +11,17 @@ const Container = styled.div`
 
 const CustomIcon = styled(Icon)`
   float: right;
-  line-height: 22px;
+  line-height: 26px;
   cursor: pointer;
+`;
+
+const Title = styled.span`
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
 `;
 
 const TitleInput = styled(Input)`
@@ -29,11 +39,17 @@ export default class PanelItem extends React.Component {
     this.model.exitEditTitle();
   }
 
+  @watch(model => model.title + model.checked)
+  watchItem() {
+    this.model.list.saveItems(this.model.list.items);
+  }
+
   render() {
     const { title, titleEditing } = this.model;
     return (
-      <Container onDoubleClick={this.model.editTitle}>
-        <span>{title}</span>
+      <Container>
+        <BindCheckbox data-bind="checked" />
+        <Title onDoubleClick={this.model.editTitle}>{title}</Title>
         <CustomIcon type="close" onClick={this.model.removeItem} />
         {titleEditing
           ? <TitleInput
