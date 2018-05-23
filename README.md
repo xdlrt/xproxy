@@ -1,14 +1,13 @@
-<p align="center">
+<div align="center">
   <img src="./assets/overview.png" width="400" />
-</p>
-
-# xproxy
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![npm](https://img.shields.io/badge/npm-v5.4.2-blue.svg)
 [![Build Status](https://travis-ci.org/xdlrt/xproxy.svg?branch=master)](https://travis-ci.org/xdlrt/xproxy)
 [![Coverage Status](https://coveralls.io/repos/github/xdlrt/xproxy/badge.svg?branch=master)](https://coveralls.io/github/xdlrt/xproxy?branch=master)
 [![inspired by](https://img.shields.io/badge/inspired%20by-xswitch-lightgrey.svg)](https://github.com/yize/xswitch)
+
+</div>
 
 [English README](./README-EN.md)
 
