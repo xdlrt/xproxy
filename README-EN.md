@@ -14,6 +14,7 @@ A Chrome extension for forward requests by rules which was inspired by [xswitch]
 ## Features
 
 - Group switch control
+- Flexible single-rule switch control
 - Redirect request.url by forwarding rules
 - Disable browser cache when this tool is activated
 - A more friendly UI interface
