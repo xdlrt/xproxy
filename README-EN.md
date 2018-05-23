@@ -16,6 +16,7 @@ A Chrome extension for forward requests by rules which was inspired by [xswitch]
 - Group switch control
 - Flexible single-rule switch control
 - Redirect request.url by forwarding rules
+- Flexible rules, support for string matching and regular expressions
 - Disable browser cache when this tool is activated
 - A more friendly UI interface
 - Complete unit testing to ensure accuracy of forwarding rules
@@ -27,10 +28,16 @@ You can download the lastest realease and load unpacked extension in Chrome.
 ## Usage
 
 <p align="center">
-  <img src="./assets/usage2.png" width="400" />
+  <img src="./assets/usage3.png" width="400" />
 </p>
 
-visit `www.baidu.com` and Chrome will redirect it to `www.taobao.com`.
+- rule 1:
+request `https://baidu.com` and browser will redirect it to `https://taobao.com`.
+
+- rule 2:
+request `https://g.alicdn.com/a.js` and browser will redirect it to `https://aliyun.alicdn.com/a.js`.
+
+more details will be find here: [wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
 
 ## License
 

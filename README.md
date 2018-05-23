@@ -18,6 +18,7 @@
 - 规则组开关控制
 - 灵活的单个规则开关控制
 - 通过规则来控制请求的url重定向
+- 规则灵活，支持字符串匹配和正则表达式
 - 当此插件生效时禁用浏览器缓存
 - UI 界面更加简洁易用
 - 完备的单元测试来保障重定向规则的准确性
@@ -29,10 +30,16 @@
 ## 使用
 
 <p align="center">
-  <img src="./assets/usage2.png" width="400" />
+  <img src="./assets/usage3.png" width="400" />
 </p>
 
-访问 `www.baidu.com` 同时 Chrome 浏览器会将它重定向为 `www.taobao.com`.
+- 规则1：
+请求 `https://baidu.com` 时，浏览器会将它重定向为 `https://taobao.com`.
+
+- 规则2：
+请求 `https://g.alicdn.com/a.js` 时，浏览器会将它重定向为 `https://aliyun.alicdn.com/a.js`
+
+详细用法请见：[wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
 
 ## License
 [MIT](https://opensource.org/licenses/MIT) © [yeshu.lrt](https://xdlrt.github.io/)
