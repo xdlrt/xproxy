@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "xproy",
-  "version": "0.0.1",
+  "name": "xproxy",
+  "version": "0.0.5",
   "description": "A Chrome Extension for forwarding request urls.",
   "icons": {
     "16": "images/icon.png",
@@ -23,6 +23,6 @@
     "browsingData",
     "<all_urls>"
   ],
-  "homepage_url": "https://github.com",
+  "homepage_url": "https://github.com/xdlrt/xproxy",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
