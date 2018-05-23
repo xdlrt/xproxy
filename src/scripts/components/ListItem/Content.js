@@ -1,11 +1,9 @@
 import React from 'react';
-import { model, binding } from 'mota';
+import { model, binding, watch } from 'mota';
 import styled from 'styled-components';
 import { Input } from 'antd';
 
-const Container = styled.div`
-
-`;
+const Container = styled.div``;
 
 const CustomInput = styled(Input) `
   margin-bottom: 8px;
@@ -15,8 +13,9 @@ const CustomInput = styled(Input) `
 @binding
 export default class PanelItem extends React.Component {
 
-  constructor() {
-    super();
+  @watch(model => model.url + model.redirectUrl + model.title)
+  watchItem() {
+    this.model.list.saveItems(this.model.list.items);
   }
 
   render() {

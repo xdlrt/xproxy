@@ -30,10 +30,12 @@ class ListModel {
 
   addItem = (item = {}) => {
     this.items.push(new ListItemModel(this, item));
+    this.saveItems(this.items);
   }
 
   removeItem = (id) => {
     this.items = this.items.filter(item => item.id !== id);
+    this.saveItems(this.items);
   }
 
   saveItems = () => {
