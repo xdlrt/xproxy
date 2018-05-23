@@ -16,7 +16,9 @@ class ListModel {
 
   get listState() {
     chrome.storage.sync.get('xproxyDisabled', (result) => {
-      this._listState = result.xproxyDisabled === 'disabled' ? false : true;
+      if (result.xproxyDisabled){
+        this._listState = result.xproxyDisabled === 'disabled' ? false : true;
+      }
     });
     return this._listState;
   }
