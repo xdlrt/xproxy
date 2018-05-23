@@ -11,7 +11,9 @@ export function getListData(listModel) {
         () => { console.log('保存默认数据成功'); }
       );
     }
-    res.xproxyConfig.proxyList.forEach(item => listModel.addItem(item));
+    else {
+      res.xproxyConfig.proxyList.forEach(item => listModel.addItem(item));
+    }
   });
 }
 
