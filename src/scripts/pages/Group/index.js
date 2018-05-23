@@ -55,7 +55,11 @@ const CustomList = styled(List) `
 export default class Group extends React.Component {
 
   componentDidMount() {
-    getListData(this.model);
+    // this timer is to avoid chrome bug 
+    // https://bugs.chromium.org/p/chromium/issues/detail?id=428044
+    setTimeout(() => {
+      getListData(this.model);
+    }, 100);
   }
 
   render() {
