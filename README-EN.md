@@ -27,7 +27,7 @@ You can download the lastest realease and load unpacked extension in Chrome.
 ## Usage
 
 <p align="center">
-  <img src="./assets/usage.png" width="400" />
+  <img src="./assets/usage2.png" width="400" />
 </p>
 
 visit `www.baidu.com` and Chrome will redirect it to `www.taobao.com`.
