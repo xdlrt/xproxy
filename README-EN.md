@@ -39,6 +39,8 @@ request `https://g.alicdn.com/a.js` and browser will redirect it to `https://ali
 
 more details will be find here: [wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
 
+tips: only support forwarding http(s) request urls
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT) © [yeshu.lrt](https://xdlrt.github.io/)

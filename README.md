@@ -41,5 +41,7 @@
 
 详细用法请见：[wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
 
+tips: 目前只支持 http(s) 协议请求的转发
+
 ## License
 [MIT](https://opensource.org/licenses/MIT) © [yeshu.lrt](https://xdlrt.github.io/)
