@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import 'antd/dist/antd.css';
 import './css/common.less';
-import Group from './scripts/pages/Group';
+import Home from './scripts/pages/Home';
 
 render(
-  <Group />,
+  <Home />,
   document.getElementById('app')
 );

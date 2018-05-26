@@ -8,22 +8,11 @@ import ItemContent from '../../components/ListItem/Content';
 import { getListData } from '../../utils/storage';
 const Item = List.Item;
 
-const CustomItem = styled(Item) `
-  margin-bottom: 16px;
-  padding: 16px 16px 0;
-  border: 0;
-  border-radius: 5px;
-  background: #f7f7f7;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
-  overflow: hidden
-`;
-
 const Container = styled.div`
-  position: relative;
-  margin: 0 auto;
-  padding: 16px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   width: 500px;
-  height: 500px;
 `;
 
 const Header = styled.div`
@@ -42,13 +31,22 @@ const HeaderSwitch = styled(Switch) `
 const CustomList = styled(List) `
   position: absolute;
   top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
   width: 100%;
-  height: 400px;
-  padding: 2px 16px 20px;
+  height: 500px;
+  padding: 2px 1px 20px;
   overflow-x: hidden;
   overflow-y: auto;
+`;
+
+const CustomItem = styled(Item) `
+  margin-bottom: 16px;
+  padding: 16px 16px 0;
+  border: 0;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+  overflow: hidden;
 `;
 
 @model(ListModel)
