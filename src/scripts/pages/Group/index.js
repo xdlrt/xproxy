@@ -5,6 +5,7 @@ import ListModel from '../../models/List';
 import { Switch, Button, List } from 'antd';
 import ItemHeader from '../../components/ListItem/Header';
 import ItemContent from '../../components/ListItem/Content';
+import Menu from '../../components/Menu';
 import { getListData } from '../../utils/storage';
 const Item = List.Item;
 
@@ -51,6 +52,12 @@ const CustomList = styled(List) `
   overflow-y: auto;
 `;
 
+const CustomMenu = styled(Menu)`
+  position: absolute;
+  left: -300px;
+  width: 300px;
+`;
+
 @model(ListModel)
 export default class Group extends React.Component {
 
@@ -65,6 +72,7 @@ export default class Group extends React.Component {
   render() {
     return (
       <Container>
+        <CustomMenu />
         <Header>
           <HeaderButton onClick={this.model.addItem}>添加规则</HeaderButton>
           <HeaderSwitch
