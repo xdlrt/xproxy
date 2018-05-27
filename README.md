@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/overview.png" width="400" />
+  <img src="./assets/overview2.png" width="400" />
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![npm](https://img.shields.io/badge/npm-v5.4.2-blue.svg)
