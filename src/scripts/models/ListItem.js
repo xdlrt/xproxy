@@ -1,6 +1,6 @@
 import uuid from 'uuid';
 
-export class ListItemModel {
+export default class ListItemModel {
   id;
   url;
   redirectUrl;
@@ -8,12 +8,12 @@ export class ListItemModel {
   title;
   description;
   
-  _list = [];
+  _list = {};
   _titleEditing = false;
 
   constructor(list, item) {
     this.id = uuid();
-    this._list = list || [];
+    this._list = list || {};
     this.title = item.title || this.id;
     this.description = item.description;
     this.url = item.url || '';

@@ -1,6 +1,5 @@
 /* global chrome */
 import defaultData from '../constants/defaultData';
-// import Toast from './toast';
 
 export function getListData(listModel) {
   chrome.storage.sync.get('xproxyConfig', (res) => {
@@ -24,15 +23,11 @@ export function saveListData(items = []) {
   });
   chrome.storage.sync.set({
     xproxyConfig: { proxyList }
-  }, () => {
-    // Toast.success('保存数据成功');
-  });
+  }, () => { console.log('设置 xproxyConfig 成功') });
 }
 
 export function saveXproxyDisabled(bool) {
   chrome.storage.sync.set({
     xproxyDisabled: bool ? '' : 'disabled'
-  }, () => {
-    // Toast.success('插件状态切换成功');
-  });
+  }, () => { console.log('设置 xproxyDisabled 成功') });
 }

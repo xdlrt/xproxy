@@ -1,6 +1,6 @@
 /* global chrome */
 import uuid from 'uuid';
-import { ListItemModel } from './listItem';
+import ListItemModel from './listItem';
 import { saveListData, saveXproxyDisabled } from '../utils/storage';
 
 class ListModel {
