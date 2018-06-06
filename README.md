@@ -13,6 +13,9 @@
 
 一个通过制定的规则来重定向请求的 Chrome 浏览器插件，灵感来源于[xswitch](https://github.com/yize/xswitch)，并且利用 React 重构整个项目。
 
+## 解决的痛点
+在日常开发和调试过程中，由于测试环境的文件变更需要使用 CDN 上的静态文件，修改后需要重新发布，十分低效和繁琐，因此需要把线上或者测试环境的 CSS、JS 等静态文件转发到本地服务器，因此需要一个方便快捷的可以管理 url 转发的工具。
+
 ## 特点
 
 - 规则组开关控制
@@ -39,7 +42,7 @@
 - 规则2：
 请求 `https://g.alicdn.com/a.js` 时，浏览器会将它重定向为 `https://aliyun.alicdn.com/a.js`
 
-详细用法请见：[wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
+详细用法请见：[usages](./doc/usages.md)
 
 tips: 目前只支持 http(s) 协议请求的转发
 

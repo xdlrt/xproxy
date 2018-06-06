@@ -11,6 +11,10 @@
 
 A Chrome extension for forward requests by rules which was inspired by [xswitch](https://github.com/yize/xswitch) and reconstruct with React.
 
+## resolved points
+
+In the daily development and debugging process, due to the file change of the test environment, the static files on the CDN are needed, and they need to be republished after modification. This is very inefficient and cumbersome. Therefore, it is necessary to forward static files such as CSS and JS on the online or test environment to the local server, so you need a convenient tool that can manage url forwarding.
+
 ## Features
 
 - Group switch control
@@ -37,7 +41,7 @@ request `https://baidu.com` and browser will redirect it to `https://taobao.com`
 - rule 2:
 request `https://g.alicdn.com/a.js` and browser will redirect it to `https://aliyun.alicdn.com/a.js`.
 
-more details will be find here: [wiki/usages](https://github.com/xdlrt/xproxy/wiki/usages)
+more details will be find here: [usages](./doc/usages.md)
 
 tips: only support forwarding http(s) request urls
 
