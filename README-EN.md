@@ -27,7 +27,9 @@ In the daily development and debugging process, due to the file change of the te
 
 ## Install 
 
-You can download the lastest realease and load unpacked extension in Chrome.
+you can install this extension in chrome app store: [xproxy](https://chrome.google.com/Pebstore/detail/xproxy/hafgnnmjcganjajbeilchhdcmnpdmdkm)
+
+You can also download the lastest realease and load unpacked extension in Chrome.
 
 ## Usage
 

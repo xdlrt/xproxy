@@ -28,7 +28,9 @@
 
 ## 安装 
 
-你可以下载最新的发行版并在 Chrome 浏览器中以未打包的形式安装。
+在 chrome 应用商店中安装：[xproxy](https://chrome.google.com/webstore/detail/xproxy/hafgnnmjcganjajbeilchhdcmnpdmdkm)
+
+也可以下载最新的 release 并在 Chrome 浏览器中以未打包的形式安装。
 
 ## 使用
 
