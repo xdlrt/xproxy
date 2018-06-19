@@ -8,10 +8,15 @@ import ItemContent from '../../components/ListItem/Content';
 import { getListData } from '../../utils/storage';
 const Item = List.Item;
 
+// const Container = styled.div`
+//   position: absolute;
+//   top: 16px;
+//   right: 16px;
+//   width: 500px;
+// `;
+
 const Container = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  margin: 0 auto;
   width: 500px;
 `;
 
@@ -28,10 +33,18 @@ const HeaderSwitch = styled(Switch) `
   margin-top: 5px;
 `;
 
-const CustomList = styled(List) `
-  position: absolute;
-  top: 60px;
-  right: 0;
+// const CustomList = styled(List) `
+//   position: absolute;
+//   top: 60px;
+//   right: 0;
+//   width: 100%;
+//   height: 500px;
+//   padding: 2px 1px 20px;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// `;
+
+const CustomList = styled(List)`
   width: 100%;
   height: 500px;
   padding: 2px 1px 20px;
